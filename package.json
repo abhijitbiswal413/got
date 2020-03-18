@@ -1,0 +1,25 @@
+{
+  "name": "got_battle",
+  "version": "1.0.0",
+  "description": "Game of Thrones Battle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namandangi/GOT_BATTLE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namandangi/GOT_BATTLE/issues"
+  },
+  "homepage": "https://github.com/namandangi/GOT_BATTLE#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.5"
+  }
+}
