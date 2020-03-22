@@ -1,0 +1,45 @@
+#card {
+	max-width: 60rem;
+	height: 15rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);		
+	padding: 0px;
+	display: flex;
+	margin: auto;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+#card h3{
+	position: absolute;
+	width: 60rem;
+	margin-top: 6rem;
+	text-align:center;
+}
+a:hover{
+	color: #ffa502;	
+  	text-shadow: 0 0 15px #d35400;
+}
+#card button{
+	position: absolute;
+	margin-left: 23rem;
+	margin-top:9rem;
+	border-radius: 50px;
+	background-color: #000;
+	max-width: 200px;
+	border: none;
+	padding: 12px;
+	width : 50%;
+	font-size: 20px;	
+}
+#card button:hover{	
+	color: #ffa502;
+	box-shadow: 0 0 15px #d35400;
+  	text-shadow: 0 0 15px #d35400;
+}
+#attack{
+	display: inline;
+	width:50%;
+}
+#defend{
+	display: inline;
+	width: 50%
+}
