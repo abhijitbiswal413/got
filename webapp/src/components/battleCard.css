@@ -9,11 +9,14 @@
 
 	width:78%;
 	color: grey;
-	margin-left: -15px;	
+	margin-left: -15px;		
+	padding: 0px;
 }
 #text >h5{
 	margin-top:20px;
 	margin-left: 20em;
+	margin-bottom: 15px;
+	color: white;
 }
 #backbtn{
 	width:22%;
@@ -42,9 +45,11 @@
 	position: absolute;
 	margin-left: 20rem;
 	text-align:center;
+	color: white;
 }
 hr{
 	width:20%;
+	color: #0000000;
 }
 #belowtext{
 	color : #999;
@@ -56,18 +61,20 @@ hr{
 	text-align: center;
 	margin-top: 25px;		
 }
-#cards{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+#cards{  
+  background-color: transparent;
+  box-shadow: 12px 12px 24px 12px rgba(0, 0, 0, 0.2);
   max-width: 1000px;
   height: 500px;  
   margin: auto;
   text-align: center;
-  margin-top: 75px;
+  margin-top: 6rem;
   padding-bottom: 75px;
   display: flex;
   z-index: 1;
 }
 #infocard{
+
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	height:60px;
 	margin:auto;
@@ -135,6 +142,7 @@ display: inline;
 	width : 50%;
 	font-size: 20px;	
 	margin-top: 40px;
+	color: white;
 }
  #btn>button:hover{	
 	color: #ffa502;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import logo from './logo192.png';
 import img from './img192.png';
 import './battleCard.css';
@@ -14,7 +14,8 @@ var style = {
   border:'solid'
 };
   
-export default function BattleCard(){
+export default class BattleCard extends Component{
+    render(){
     return(
     <>
     <div id="abovecard">
@@ -25,16 +26,16 @@ export default function BattleCard(){
 <h3  id="toptext">BATTLE  OF  THE  BASTARDS</h3>  
     <div className="profileattack">
       <img src={logo} style={{width:300}} alt="Attacking Commander" /> 
-      <h4 id="name">S N O W</h4>      
+      <h4 id="name" style={{color:'white'}}>S N O W</h4>      
       <hr />   
-      <h5 id="belowtext">Bastard of Winterfell</h5>    
+      <h5 id="belowtext" style={{color:'white'}}>Bastard of Winterfell</h5>    
     </div>
     {/*<hr style={style} />  */}
     <div className="profiledefend">
       <img src={img} style={{width:300}} alt="Defending Commander" />     
-      <h4 id="name">B O L T O N</h4>     
+      <h4 id="name" style={{color:'white'}}>B O L T O N</h4>     
       <hr />   
-      <h5 id="belowtext">Lord of Dreadfort</h5>
+      <h5 id="belowtext" style={{color:'white'}}>Lord of Dreadfort</h5>
     </div>    
 </div>
 <div id="infocard">
@@ -75,4 +76,5 @@ export default function BattleCard(){
 </div>
   </> 
     );
+  }
 }

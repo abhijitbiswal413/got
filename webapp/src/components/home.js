@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import './home.css';
 
 import {Link}  from 'react-router-dom';
@@ -79,12 +79,14 @@ function Hero(){
 	);
 }
 
-export default function Home(){
+export default class Home extends Component{
+        render(){
         return (
         <div id="Body">
 	        <Header />
 			<Hero />            
         </div>
         );
+    }
 };
 
