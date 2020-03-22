@@ -15,6 +15,17 @@ var style = {
 };
   
 export default class BattleCard extends Component{
+    state ={
+      data:''
+    }
+
+      async componentDidMount() {
+      const response = await fetch(`http://localhost:4000/api/gotb/list/${this.props.location.state.id}`);
+      const content = await response.json();
+      await this.setState({data:(content)});
+      console.dir(content,this.state.data)
+      console.dir(this.state.data.name)
+};
     render(){
     return(
     <>
@@ -23,19 +34,19 @@ export default class BattleCard extends Component{
       <div id="text"><h5>T O N I G H T ' S</h5></div>
   </div>
 <div id="cards">  
-<h3  id="toptext">BATTLE  OF  THE  BASTARDS</h3>  
+<h3  id="toptext">{this.state.data.name}</h3>  
     <div className="profileattack">
       <img src={logo} style={{width:300}} alt="Attacking Commander" /> 
-      <h4 id="name" style={{color:'white'}}>S N O W</h4>      
+      <h4 id="name" style={{color:'white'}}>{this.state.data.attacker_1}</h4>      
       <hr />   
-      <h5 id="belowtext" style={{color:'white'}}>Bastard of Winterfell</h5>    
+      <h5 id="belowtext" style={{color:'white'}}>Lord of Winterfell(static)</h5>    
     </div>
     {/*<hr style={style} />  */}
     <div className="profiledefend">
       <img src={img} style={{width:300}} alt="Defending Commander" />     
-      <h4 id="name" style={{color:'white'}}>B O L T O N</h4>     
+      <h4 id="name" style={{color:'white'}}>{this.state.data.defender_1}</h4>     
       <hr />   
-      <h5 id="belowtext" style={{color:'white'}}>Lord of Dreadfort</h5>
+      <h5 id="belowtext" style={{color:'white'}}>Lord of Dreadfort(static)</h5>
     </div>    
 </div>
 <div id="infocard">
