@@ -1,0 +1,75 @@
+ .search {
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     pointer-events: none;
+     margin-top: 20px;
+}
+ .search input {
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     font-size: 14px;
+     height: 37px;
+     width: 20%;
+     background: transparent;
+     color: #fff;
+     appearance: none;
+     border: 0;
+     border: 2px solid rgba(245, 245, 241, .1);
+     outline: none;
+     border-radius: 37px;
+     padding: 0 10px;
+     pointer-events: all;
+     transition: border 0.25s ease, width 0.125s ease 0.125s;
+}
+ .search input:focus {
+     border: 2px solid #e50914;
+     width: 30%;
+     ul.options{
+          display: block;
+     }
+}
+
+ul.options {
+  display: block;
+  list-style: none;
+  width: 32rem;
+  margin-top: 6rem;
+  margin-left: 36rem;
+  transition: width 0.3s;  
+  position: relative;
+}
+ul.options :focus{
+     width: 40rem;
+}
+ul.options li {
+  display: block;
+  background: white;
+  margin: 10px auto;
+  padding: 10px;
+  height: 40px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  font-size: 1.2rem;
+  width: 100%;
+  border-radius: 2px;
+}
+ul.options li:hover {
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+ul.options li.option-active {
+  background: whitesmoke;
+  font-size: 1.5rem;
+  color: #123;
+}
+.no-options {
+  color: white;
+}
+
