@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import img from './480240.png';
+import backdrop1 from './cardBackground/greyjoy.jpeg'
+import backdrop2 from './cardBackground/tully.jpeg'
 import './columnCard.css';
 
 import {
@@ -39,7 +41,8 @@ export default class ColumnCard extends Component{
 	return(
 		<>				
 		
-		<Link to="/"><a href="#" id="back"style={{fontSize:35,marginLeft:'10rem',width:'40',padding:0}}>&#60;</a></Link>
+
+		<div id="columnbackbtn"><Link to="/count"><a href="#"> &#60; </a></Link></div>
 		{this.state.title.map((el,idx)=>
 				<li key={idx}>
 					<div id="card">
@@ -49,8 +52,8 @@ export default class ColumnCard extends Component{
 							pathname:`/list/${this.state.id[idx]}`,
 							state:{id:this.state.id[idx]}
 						}}><button>WATCH</button></Link>
-						<div id="attack" style={{backgroundImage:`url(${img})`}}></div>
-						<div id="defend" style={{backgroundImage:`url(${img})`}}></div>
+						<div id="attack" style={{backgroundImage:`url(${backdrop1})`}}></div>
+						<div id="defend" style={{backgroundImage:`url(${backdrop2})`}}></div>
 					</div>	  	
 				</li>
 			)}  						

@@ -43,3 +43,12 @@ a:hover{
 	display: inline;
 	width: 50%
 }
+#columnbackbtn{
+  width:15%;
+  border-radius: 10px;
+  border: none;
+  font-size: 45px;
+  padding: 6px; 
+  text-align: right;
+  margin-bottom: -2rem;
+}

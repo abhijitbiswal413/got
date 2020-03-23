@@ -34,6 +34,7 @@
 }
 #toptext{	
 	position: absolute;
+	width:1000px;
 	color: grey;	
 	font-size: 30px;
 	opacity: 1.3;	
@@ -43,7 +44,7 @@
 }
 #cards h3{
 	position: absolute;
-	margin-left: 20rem;
+	
 	text-align:center;
 	color: white;
 }
@@ -108,7 +109,7 @@ hr{
 	margin-left: 20px;
 }
 .profileattack{
-margin-top: 75px;
+margin-bottom:-75px;
 width:50%;
 display: inline;
 
@@ -116,11 +117,11 @@ display: inline;
 .profileattack img{
 	max-width: 200px;
 	border-radius:50%;
-	padding :12px;
+	padding :0px;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);	
 }
 .profiledefend{
-margin-top: 75px;
+margin-bottom:-75px;
 width:50%;
 display: inline;		
 }
@@ -133,7 +134,7 @@ display: inline;
 	display: flex;
 	justify-content: center;
 }
-#btn> button {
+#btn button {
 	border-radius: 50px;
 	background-color: #000;
 	max-width: 200px;
@@ -144,7 +145,7 @@ display: inline;
 	margin-top: 40px;
 	color: white;
 }
- #btn>button:hover{	
+ #btn button:hover{	
 	color: #ffa502;
 	box-shadow: 0 0 15px #d35400;
   	text-shadow: 0 0 15px #d35400;
