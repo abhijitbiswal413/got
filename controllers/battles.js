@@ -17,6 +17,20 @@ router.get('/list',async(req,res)=>{
 })
 
 /*
+**@ GET api/gotb/list/:id
+*/
+router.get('/list/:id',async(req,res)=>{
+    try{
+        let battles = await Battle.findById(req.params.id);
+        return res.status(200).json(battles);
+    }
+    catch(err){
+        return res.json(err);
+    }
+    
+})
+
+/*
 **@ GET api/gotb/count
 */
 router.get('/count',async(req,res)=>{

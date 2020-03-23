@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const logger = require('morgan');
+const cors = require('cors');
 const csv = require('csvtojson');
 const Battle = require('./models/battles');
 const {battleController} = require('./controllers');
@@ -11,6 +13,8 @@ mongoose.connect('mongodb://localhost:27017/GOT',{  useNewUrlParser: true,useUni
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use(logger('dev'));
+app.use(cors());
 
 app.use(express.static('./static/'));
 
