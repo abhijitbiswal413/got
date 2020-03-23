@@ -3,6 +3,8 @@ import React from 'react';
 import BattleCard from './battleCard'
 import Home from './home';
 import ColumnCard from './columnCard';
+import Summary from './summary';
+import Count from './battleCount';
 import Autocomplete from './autocomplete';
 
 import {
@@ -33,11 +35,16 @@ class Index extends React.Component{
                             ]}
                         />
                     </Route>
-                    <Route exact path="/list">
-                        <ColumnCard />
+                    <Route exact path="/count" component={Count}>
                     </Route>
-                    <Route exact path="/list/id">
-                        <BattleCard />
+
+                    <Route exact path="/list" component={ColumnCard}>
+                        
+                    </Route>
+                    <Route exact path="/list/:id/summary" component={Summary}   >
+                    </Route>
+                    <Route path="/list/" component={BattleCard}>
+                        
                     </Route>
                 </Switch>    
             </Router>
