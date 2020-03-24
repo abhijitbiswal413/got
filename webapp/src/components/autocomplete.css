@@ -37,8 +37,8 @@ ul.options {
   display: block;
   list-style: none;
   width: 32rem;
-  margin-top: 6rem;
-  margin-left: 36rem;
+  margin-top: 72px;
+  margin-left: 10px;
   transition: width 0.3s;  
   position: relative;
 }

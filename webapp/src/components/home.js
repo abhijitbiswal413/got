@@ -1,8 +1,32 @@
 import React ,{Component} from 'react';
 import backdrop from './fitBackdrop/got.jpg';
+import Autocomplete from './autocomplete';
 import './home.css';
 
 import {Link}  from 'react-router-dom';
+
+
+
+export default class Home extends Component{
+    state = {
+        data:[],
+    }
+
+
+    async componentDidMount() {
+        const response = await fetch('http://localhost:4000/api/gotb/location');
+        const content = await response.json();
+        await this.setState({data:(content)});
+    }
+        render(){
+        return (
+        <div id="Body">
+            <Header options={this.state.data}/>
+            <Hero />            
+        </div>
+        );
+    }
+};
 
 function Logo(){
         return (
@@ -47,10 +71,23 @@ function Search(){
         );
 }; */}
 
-function Header(){
+function Header(props){
         return (
             <header className="Header">
             	<Logo />
+                {console.dir(props.options)}
+                <Autocomplete
+                          /*}  options={[
+                              "Papaya",
+                              "Persimmon",
+                              "Paw Paw",
+                              "Prickly Pear",
+                              "Peach",
+                              "Pomegranate",
+                              "Pineapple"
+                            ]}      */
+                            options={props.options}
+                        />
                 {/* <Navigation />	*/}
   	    {/*}       	<Search />	*/}
             </header>
@@ -79,15 +116,3 @@ function Hero(){
             </div>
 	);
 }
-
-export default class Home extends Component{
-        render(){
-        return (
-        <div id="Body">
-	        <Header />
-			<Hero />            
-        </div>
-        );
-    }
-};
-

@@ -17,6 +17,24 @@ router.get('/list',async(req,res)=>{
 })
 
 /*
+**@ GET api/gotb/location
+*/
+router.get('/location',async(req,res)=>{
+    try{
+        let battles = await Battle.find();
+        let location=[];
+        battles.map(el=>{
+            location.push(el.location);
+        });        
+        return res.status(200).json(location);
+    }
+    catch(err){
+        return res.json(err);
+    }
+    
+})
+
+/*
 **@ GET api/gotb/list/:id
 */
 router.get('/list/:id',async(req,res)=>{
