@@ -7,7 +7,7 @@ const router = express.Router();
 */
 router.get('/list',async(req,res)=>{
     try{
-        let battles = await Battle.find();
+        let battles = await Battle.find(req.query);
         return res.status(200).json(battles);
     }
     catch(err){
@@ -39,7 +39,7 @@ router.get('/location',async(req,res)=>{
 */
 router.get('/list/:id',async(req,res)=>{
     try{
-        let battles = await Battle.findById(req.params.id);
+        let battles = await Battle.findById(req.params.id).sort('battle_number');
         return res.status(200).json(battles);
     }
     catch(err){
@@ -81,7 +81,7 @@ router.get('/search',async(req,res)=>{
                 $or : [{attacker_1 :attacker},{attacker_2:attacker},{attacker_3:attacker},{attacker_4:attacker}],
                 $or : [{defender_1 :defender},{defender_2:defender},{defender_3:defender},{defender_4:defender}],
                 $or : [{attacker_size:size},{defender_size:size}] ,
-            }).find(req.query);
+            }).find(req.query).sort('battle_number');
         return res.json(result);
     }
     catch(err){

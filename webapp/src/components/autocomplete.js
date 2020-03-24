@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link,Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './autocomplete.css';
 
@@ -10,7 +11,8 @@ export class Autocomplete extends Component {
     activeOption: 0,
     filteredOptions: [],
     showOptions: false,
-    userInput: ''
+    userInput: '',
+    redirect:false
   };
   option = React.createRef();
   state = {
@@ -47,9 +49,10 @@ export class Autocomplete extends Component {
       activeOption: 0,
       filteredOptions: [],
       showOptions: false,
-      userInput: e.currentTarget.innerText
+      userInput: e.currentTarget.innerText,
     });
   };
+
   onKeyDown = (e) => {
     const { activeOption, filteredOptions } = this.state;
 
@@ -75,18 +78,17 @@ export class Autocomplete extends Component {
 /*  handleClickOutside = (e) => {
   if (this.container.current && !this.container.current.contains(e.target)) {
     this.setState({
-      open: false,
+      showOptions: false,
     });
   }
-};  */
+};  */  
 
   render() {
     const {
       onChange,
       onClick,
       onKeyDown,
-
-      state: { activeOption, filteredOptions, showOptions, userInput }
+      state: { activeOption, filteredOptions, showOptions, userInput ,redirect}
     } = this;
     let optionList;
     if (showOptions && userInput) {
@@ -99,9 +101,9 @@ export class Autocomplete extends Component {
                 className = 'option-active';
               }
               return (
-                <li className={className} key={optionName} onClick={onClick}>
+                <Link to={{pathname:'/search',state:{name:optionName}}}><li className={className} key={optionName} onClick={onClick}>
                   {optionName}
-                </li>
+                </li></Link>
               );
             })}
           </ul>
