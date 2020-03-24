@@ -3,6 +3,19 @@ import logo from './logo192.png';
 import img from './img192.png';
 import backdrop from './fitBackdrop/got4.jpg';
 import './summary.css';
+import {
+	GiBrutalHelm,
+	GiOldKing,
+	GiPoliceBadge,
+	GiHighShot,
+	GiFlame,
+	GiNunFace,
+	GiOverlordHelm,
+	GiCrossedSabres,
+	GiArrowWings
+} from 'react-icons/gi';
+import {AiFillCrown,AiFillCalendar,AiOutlineLeft,AiFillDatabase} from 'react-icons/ai';
+import {WiCloudyWindy} from 'react-icons/wi';
 
 import {Link} from 'react-router-dom';
 
@@ -39,7 +52,7 @@ export default class Summary extends Component{
 		return(
 			<>
 	    	<div id="abovecard">
-		      <div id="summarybackbtn"><Link to={{pathname:`/list/${this.props.location.state.data._id}`,state:{id:this.props.location.state.data._id} }}><a href="#"> &#60; </a></Link></div>
+		      <div id="summarybackbtn"><Link to={{pathname:`/list/${this.props.location.state.data._id}`,state:{id:this.props.location.state.data._id} }}><a href="#"> <AiOutlineLeft /> </a></Link></div>
 		 	</div>			
 			<div id="summarycard" style={{backgroundImage:`url(${backdrop})`}}>  
 				<h3  id="summarytoptext">S U M M A R Y</h3>  
@@ -55,33 +68,37 @@ export default class Summary extends Component{
 			      <hr />
 			      <div id="cardrow">
 			      	<h4>{this.state.attackarmysize}</h4>
-			      	<div id="logo"><img src={img} alt="armysize"/></div>
+			      	<div id="logo"><h5><GiPoliceBadge />&nbsp; ARMY SIZE &nbsp;<GiPoliceBadge /> </h5></div>
 			      	<h4>{this.state.defendarmysize}</h4>
 			      </div>
 			      <div id="cardrow">
 			      	<h4>{this.state.attacker_king}</h4>
-			      	<div id="logo"><img src={img} alt="kingname"/></div>
+			      	<div id="logo"><h5><AiFillCrown />&nbsp; KING &nbsp;<AiFillCrown /> </h5></div>
 			      	<h4>{this.state.defender_king}</h4>
 			      </div>
 			      <div id="cardrow">
 			      	<h4>{this.state.attacker_commander}</h4>
-			      	<div id="logo"><img src={img} alt="commandername"/></div>
+			      	<div id="logo"><h5><GiBrutalHelm />&nbsp; COMMANDER &nbsp;<GiBrutalHelm /> </h5></div>
 			      	<h4>{this.state.defender_commander}</h4>
 			      </div>
 			      <div id="cardrow">
 			      	<h4>{this.state.season}</h4>
 			      	<div id="multi">
-				      	<h5>SEASON</h5>
-				      	<h5>YEAR</h5>
+			      		<h6>&nbsp;</h6>
+				      	<h5><WiCloudyWindy /> &nbsp; SEASON &nbsp;</h5>
+				      	<h5> &nbsp; YEAR &nbsp; <AiFillCalendar /></h5>
+				      	<h6>&nbsp;</h6>
 			      	</div>
 			      	<h4>{this.state.year}</h4>
 			      </div>
-			      <h4 style={{marginBottom:'-20px'}}>BATTLE</h4>
+			      <h4 style={{marginBottom:'-5px',marginBottom:'-15px'}}><GiCrossedSabres /> &nbsp; BATTLE &nbsp; <GiCrossedSabres /></h4>
 			      <div id="cardrow">
 			      	<h4>{this.state.type}</h4>
 			      	<div id="multi">
-				      	<h5>TYPE</h5>
-				      	<h5>NUMBER</h5>
+			      		<h6></h6>
+				      	<h5><GiHighShot /> &nbsp; TYPE </h5>
+				      	<h5>&nbsp; NO. &nbsp; <AiFillDatabase /></h5>
+				      	<h6></h6>
 			      	</div>
 			      	<h4>{this.state.battleno}</h4>
 			      </div>

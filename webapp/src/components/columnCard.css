@@ -1,3 +1,6 @@
+body{
+	background-image: url('./fitBackdrop/houses2.jpg');
+}
 #card {
 	max-width: 60rem;
 	height: 15rem;
@@ -10,27 +13,32 @@
 }
 #card h3{
 	position: absolute;
-	width: 60rem;
+	width: 59.5%;
 	margin-top: 6rem;
 	text-align:center;
 }
-a:hover{
+#card a:hover{
 	color: #ffa502;	
   	text-shadow: 0 0 15px #d35400;
 }
-#card button{
+#columnbtn{
 	position: absolute;
-	margin-left: 23rem;
-	margin-top:9rem;
+	display: flex;
+	justify-content: center;
+	width: 59.5%;
+}
+#columnbtn button{
 	border-radius: 50px;
 	background-color: #000;
-	max-width: 200px;
+	
 	border: none;
 	padding: 12px;
-	width : 50%;
+	width : 200px;
 	font-size: 20px;	
+	margin-top: 10rem;
+	color: white;
 }
-#card button:hover{	
+#columnbtn button:hover{	
 	color: #ffa502;
 	box-shadow: 0 0 15px #d35400;
   	text-shadow: 0 0 15px #d35400;

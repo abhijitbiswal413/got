@@ -1,9 +1,26 @@
-
+.react-icons{
+	vertical-align: middle;
+	size: 2em;
+}
 #abovecard{
-	
+	width: 81%;
 	margin-top: 10px;
 	margin-bottom: -75px;
 	display: flex;
+}
+#abovecard h5{
+	display: inline;
+	color: white;
+	font-size: 25px;
+	width:78%;
+	text-align: center;
+}
+#abovecard a{
+	width: 22%;
+	display: inline;
+	float:end;
+	font-size: 45px;
+	text-align: right;
 }
 #text{
 
@@ -17,6 +34,12 @@
 	margin-left: 20em;
 	margin-bottom: 15px;
 	color: white;
+}
+#kuchbhi{
+	position: absolute;
+	text-align: center;
+	display: inline;
+	width: 100%
 }
 #backbtn{
 	width:22%;
@@ -34,7 +57,7 @@
 }
 #toptext{	
 	position: absolute;
-	width:1000px;
+	width:62%;
 	color: grey;	
 	font-size: 30px;
 	opacity: 1.3;	
@@ -43,10 +66,12 @@
 	margin-top: -1rem;
 }
 #cards h3{
-	position: absolute;
-	
-	text-align:center;
+	position: absolute;		
 	color: white;
+	text-align: center;
+	width:62.1%;
+	margin-top: -25px;
+	font-size: 45px;
 }
 hr{
 	width:20%;
@@ -75,7 +100,7 @@ hr{
   z-index: 1;
 }
 #infocard{
-
+	background: #9999;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	height:60px;
 	margin:auto;
@@ -101,12 +126,12 @@ hr{
 }
 #infoitem{
 	display: flex;
-	margin-top: 15px;
+	margin-top: 10px;
 	width :33%;
 }
-#infoitem >img{
-	max-height: 25px;
-	margin-left: 20px;
+#infoitem >h5{
+	align-self: center;
+		
 }
 .profileattack{
 margin-bottom:-75px;
@@ -149,4 +174,21 @@ display: inline;
 	color: #ffa502;
 	box-shadow: 0 0 15px #d35400;
   	text-shadow: 0 0 15px #d35400;
+}
+.overlay{
+	background: -moz-linear-gradient(top, rgba(34, 31, 31, 1) 0%, rgba(34, 31, 31, 0) 100%);
+    /* FF3.6-15 */
+     background: -webkit-linear-gradient(top, rgba(34, 31, 31, 1) 0%, rgba(34, 31, 31, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(to bottom, rgba(34, 31, 31, 1) 0%, rgba(34, 31, 31, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=0);
+    /* IE6-9 */
+     height: 100%;
+     position: absolute;
+     z-index: 3;
+     top: 0;
+     left: 0;
+     width: 100%;
+     transform: rotate(180deg);
 }

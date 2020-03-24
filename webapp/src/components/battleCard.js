@@ -6,9 +6,27 @@ import jon from './fitBackdrop/jon.jpg';
 import jonicon from './fitBackdrop/jonicon.jpg';
 import jammie from './fitBackdrop/jammie.jpg';
 import jammieicon from './fitBackdrop/jammieicon.jpg';
+import house1 from './cardBackground/lannister.jpeg';
+import house2 from './cardBackground/bolton.jpeg';
 import './battleCard.css';
 
 import {Link}  from 'react-router-dom';
+import {
+  GiBrutalHelm,
+  GiOldKing,
+  GiPoliceBadge,
+  GiHighShot,
+  GiFlame,
+  GiNunFace,
+  GiOverlordHelm,
+  GiCrossedSabres,
+  GiArrowWings,
+  GiBleedingEye,
+  GiBoneGnawer
+} from 'react-icons/gi';
+import {WiCloudyWindy} from 'react-icons/wi';
+import {AiFillCrown,AiFillCalendar,AiOutlineLeft,AiFillDatabase} from 'react-icons/ai';
+import {IconContext} from 'react-icons';
 
 const apath = './attack1.jpeg'
 var style = {
@@ -56,18 +74,17 @@ export default class BattleCard extends Component{
     return(
     <>
     <div id="abovecard">
-      <div id="backbtn"><Link to="/list/"><a href="#"> &#60; </a></Link></div>
-      <div id="text"><h5>T O N I G H T ' S</h5></div>
+      <Link to="/list/"><a href="#"> <AiOutlineLeft /> </a></Link>
+      <h5>T O N I G H T ' S</h5>
   </div>
 <div id="cards">  
-<h3  id="toptext">{this.state.data.name}</h3>  
+    <h3 >{this.state.data.name}</h3>
     <div className="profileattack" style={{backgroundImage:`url(${jon})`}}>
       <img src={jonicon} style={{width:300,height:200,marginTop:75}} alt="Attacking Commander" /> 
       <h4 id="name" style={{color:'white'}}>{this.state.data.attacker_1}</h4>      
       <hr />   
       <h5 id="belowtext" style={{color:'white'}}>{this.state.abase}</h5>    
     </div>
-    {/*<hr style={style} />  */}
     <div className="profiledefend" style={{backgroundImage:`url(${jammie})`}}>
       <img src={jammieicon} style={{width:200,height:200,marginTop:75}} alt="Defending Commander" />     
       <h4 id="name" style={{color:'white'}}>{this.state.data.defender_1}</h4>     
@@ -77,34 +94,34 @@ export default class BattleCard extends Component{
 </div>
 <div id="infocard">
   <div id="attackinfo">
-    <img src={logo} style={{width:70}}/> 
+    <img src={house1} style={{width:70}}/> 
     <div id="infoitem">
-      <img src={logo} style={{width:20}}/> 
+      <IconContext.Provider value={{size:'2.5em',verticalAlign:'middle'}}><GiPoliceBadge /></IconContext.Provider>
       <h5>{this.state.data.attacker_size}</h5>
     </div>
     <div id="infoitem">
-      <img src={logo} style={{width:20}}/> 
+      <IconContext.Provider value={{size:'2.5em',verticalAlign:'middle'}}><WiCloudyWindy /></IconContext.Provider>
       <h5>{this.state.season}</h5>
     </div>
     <div id="infoitem">
-      <img src={logo} style={{width:20}}/> 
+      <IconContext.Provider value={{size:'2.5em',verticalAlign:'middle'}}><GiBoneGnawer /></IconContext.Provider>
       <h5>{this.state.data.major_death}</h5>
     </div>
   </div>
   <div id="defendinfo">
     <div id="infoitem">
-      <img src={logo} style={{width:20}}/> 
+      <IconContext.Provider value={{size:'2.5em',verticalAlign:'middle'}}><GiBleedingEye /></IconContext.Provider>
       <h5>{this.state.data.major_capture}</h5>
     </div>
     <div id="infoitem">
-      <img src={logo} style={{width:20}}/> 
+      <IconContext.Provider value={{size:'2.5em',verticalAlign:'middle'}}><AiFillCalendar /></IconContext.Provider>
       <h5>{this.state.data.year}</h5>
     </div>
     <div id="infoitem">
-      <img src={logo} style={{width:20}}/> 
+      <IconContext.Provider value={{size:'2.5em',verticalAlign:'middle'}}><GiPoliceBadge /></IconContext.Provider>
       <h5>{this.state.data.defender_size}</h5>    
     </div>
-  <img src={logo} style={{width:70}}/> 
+  <img src={house2} style={{width:70}}/> 
   </div>
 </div>
 

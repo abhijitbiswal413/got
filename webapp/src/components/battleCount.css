@@ -8,7 +8,7 @@
   margin-top: 8rem;
   padding-bottom: 75px;
   display: flex;
-  z-index: 1;
+  margin-bottom: 6rem;
 }
 .battleprofile{  
   margin-top: 13rem;
@@ -25,7 +25,6 @@
   max-width: 200px;
   border: none;
   padding: 12px;
-  width : 50%;
   font-size: 20px;  
   margin-top: 40px;
   color: white;

@@ -1,6 +1,7 @@
 import React ,{Component} from 'react';
 import backdrop from './fitBackdrop/got.jpg';
 import Autocomplete from './autocomplete';
+import logo from './fitBackdrop/gotlogo.png'
 import './home.css';
 
 import {Link}  from 'react-router-dom';
@@ -77,17 +78,8 @@ function Header(props){
             	<Logo />
                 {console.dir(props.options)}
                 <Autocomplete
-                          /*}  options={[
-                              "Papaya",
-                              "Persimmon",
-                              "Paw Paw",
-                              "Prickly Pear",
-                              "Peach",
-                              "Pomegranate",
-                              "Pineapple"
-                            ]}      */
-                            options={props.options}
-                        />
+                    options={props.options}
+                 />
                 {/* <Navigation />	*/}
   	    {/*}       	<Search />	*/}
             </header>
@@ -104,7 +96,7 @@ function Hero(){
 	return(
 		<div id="hero" className="Hero" style={{backgroundImage: `url(${backdrop})`}}>
                 <div className="content">
-                    <img className="logo" src="http://www.returndates.com/backgrounds/narcos.logo.png" alt="" />
+                    <img className="logo" src={logo} alt="" />
                     <h2>Season 2 now available</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque id quam sapiente unde voluptatum alias vero debitis, magnam quis quod.</p>
  					 <div className="button-wrapper">

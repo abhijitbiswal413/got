@@ -6,6 +6,7 @@ import ColumnCard from './columnCard';
 import Summary from './summary';
 import Count from './battleCount';
 import Autocomplete from './autocomplete';
+import SearchedBattle from './searchedBattle';
 
 import {
   BrowserRouter as Router,
@@ -23,7 +24,7 @@ class Index extends React.Component{
                 <Switch>
                     <Route exact path="/">
                         <Home />
-                        <Autocomplete
+                {/*}    <Autocomplete
                             options={[
                               "Papaya",
                               "Persimmon",
@@ -33,7 +34,9 @@ class Index extends React.Component{
                               "Pomegranate",
                               "Pineapple"
                             ]}
-                        />
+                        />  */}
+                    </Route>
+                    <Route path = "/search" component={SearchedBattle}>
                     </Route>
                     <Route exact path="/count" component={Count}>
                     </Route>

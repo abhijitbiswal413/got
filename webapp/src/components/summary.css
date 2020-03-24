@@ -2,7 +2,7 @@
   background-color: transparent;
   box-shadow: 12px 12px 24px 12px rgba(0, 0, 0, 0.2);
   max-width: 75rem;
-  height: 45rem;  
+  height:45rem;
   margin: auto;
   text-align: center;
   margin-top: 8rem;
@@ -52,7 +52,11 @@ display: inline;
   width: 33.3%
 }
 #multi h5{
-  width: 50%;
+  width: 35%;
+  align-self:center;
+}
+#multi h6{
+  width:15%;
 }
 #summarybackbtn{
   width:15%;
