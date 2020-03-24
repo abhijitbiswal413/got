@@ -15,7 +15,6 @@ export default class Home extends Component{
 
 
     async componentDidMount() {
-        await fetch('http://localhost:4000/api/gotb/');
         const response = await fetch('http://localhost:4000/api/gotb/location');
         const content = await response.json();
         await this.setState({data:(content)});
