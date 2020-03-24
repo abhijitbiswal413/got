@@ -97,8 +97,8 @@ function Hero(){
 		<div id="hero" className="Hero" style={{backgroundImage: `url(${backdrop})`}}>
                 <div className="content">
                     <img className="logo" src={logo} alt="" />
-                    <h2>Season 2 now available</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque id quam sapiente unde voluptatum alias vero debitis, magnam quis quod.</p>
+                    <h2>Winter is coming</h2>
+                    <p>When the snows fall and the white winds blow, the lone wolf dies, but the pack survives. </p>
  					 <div className="button-wrapper">
                         <Link to="/count"><HeroButton primary={true} text="Watch now" /></Link>
                      {/*   <HeroButton primary={false} text="+ My list" />  */}                     

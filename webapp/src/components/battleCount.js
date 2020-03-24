@@ -1,6 +1,4 @@
 import React , {Component} from 'react';
-import logo from './logo192.png';
-import img from './img192.png';
 import backdrop from './backdrop/battle.jpg';
 import './battleCount.css'
 
