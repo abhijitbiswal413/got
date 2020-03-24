@@ -9,7 +9,7 @@ const {battleController} = require('./controllers');
 const csvFilePath='./public/csv/battles.csv';
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/GOT',{  useNewUrlParser: true,useUnifiedTopology: true,});
+mongoose.connect('mongodb+srv://naman:naman123@cluster0-xnged.mongodb.net/test?retryWrites=true&w=majority',{  useNewUrlParser: true,useUnifiedTopology: true,});
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
