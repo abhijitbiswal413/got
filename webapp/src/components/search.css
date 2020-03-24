@@ -1,0 +1,61 @@
+
+#searchcard {
+  background:#9999;
+  max-width: 60rem;
+  height: 15rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);   
+  padding: 0px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+#searchcard h3{
+  position: absolute;
+  width: 60rem;
+  margin-top: 6rem;
+  text-align:center;
+}
+#searchcard a:hover{
+  color: #ffa502; 
+  text-shadow: 0 0 15px #d35400;
+}
+#attack{
+  display: inline;
+  width:50%;
+}
+#defend{
+  display: inline;
+  width: 50%
+}
+#columnbackbtn{
+  width:15%;
+  border-radius: 10px;
+  border: none;
+  font-size: 45px;
+  padding: 6px; 
+  text-align: right;
+  margin-bottom: -2rem;
+}
+#columnbtn button{
+  border-radius: 50px;
+  background-color: #000;
+  
+  border: none;
+  padding: 12px;
+  width : 200px;
+  font-size: 20px;  
+  margin-top: 10rem;
+  color: white;
+}
+#columnbtn button:hover{  
+  color: #ffa502;
+  box-shadow: 0 0 15px #d35400;
+    text-shadow: 0 0 15px #d35400;
+}
+#searchcard h3{
+  position: absolute;
+  width: 59.5%;
+  margin-top: 6rem;
+  text-align:center;
+}
