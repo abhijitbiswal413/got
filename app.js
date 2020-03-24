@@ -30,4 +30,12 @@ app.get('/',async(req,res)=>{
 });
 app.use('/api/GOTB/',battleController);
 
+if(process.env.NODE_ENV==="production"){
+  app.use(express.static(path.join(__dirname,"webapp","build")));
+  app.get("/",(req,res)=>{
+    res.sendFile(path.join(__dirname,"webapp","build","index.html"))
+  })
+
+}
+
 module.exports = app; 
