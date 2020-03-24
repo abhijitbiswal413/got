@@ -23,10 +23,15 @@ router.get('/location',async(req,res)=>{
     try{
         let battles = await Battle.find();
         let location=[];
-        battles.map(el=>{
-            location.push(el.location);
+       await battles.map(el=>{
+             location.push(el.location);
         });        
-        return res.status(200).json(location);
+          let a = []
+          location.map(x => {
+            if(!a.includes(x)) 
+              a.push(x)
+            })        
+        return res.status(200).json(a);
     }
     catch(err){
         return res.json(err);

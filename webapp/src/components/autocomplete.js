@@ -19,12 +19,6 @@ export class Autocomplete extends Component {
   open: false,
 };
 
-  componentDidMount() {
-      document.addEventListener("mousedown", this.handleClickOutside);
-  }
-  componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClickOutside);
-  }
   onChange = (e) => {
     console.log('onChanges');
 
@@ -75,13 +69,6 @@ export class Autocomplete extends Component {
       this.setState({ activeOption: activeOption + 1 });
     }
   };
-/*  handleClickOutside = (e) => {
-  if (this.container.current && !this.container.current.contains(e.target)) {
-    this.setState({
-      showOptions: false,
-    });
-  }
-};  */  
 
   render() {
     const {
