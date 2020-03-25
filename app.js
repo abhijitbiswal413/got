@@ -22,7 +22,13 @@ app.get('/',async(req,res)=>{
     try{
         const jsonArray=await csv().fromFile(csvFilePath);
       let record = await Battle.create(jsonArray);
-      return res.json(record);
+	      if(process.env.NODE_ENV==="production"){
+	  app.use(express.static(path.join(__dirname,"webapp","build")));
+	  app.get("/",(req,res)=>{
+	    res.sendFile(path.join(__dirname,"webapp","build","index.html"))
+	  })
+	}
+
     }
     catch(err){
         return res.send(err)
@@ -30,12 +36,5 @@ app.get('/',async(req,res)=>{
 });
 app.use('/api/GOTB/',battleController);
 
-if(process.env.NODE_ENV==="production"){
-  app.use(express.static(path.join(__dirname,"webapp","build")));
-  app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"webapp","build","index.html"))
-  })
-
-}
 
 module.exports = app; 
